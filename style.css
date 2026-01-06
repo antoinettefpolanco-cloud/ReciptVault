@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.profile-icon {
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/* Summary Card */
+.summary-card {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.summary-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.total-amount {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #10b981;
+}
+
+.summary-text {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* Add Receipt Button */
+.add-receipt-btn {
+    width: calc(100% - 40px);
+    margin: 20px;
+    padding: 18px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.add-receipt-btn:hover {
+    transform: translateY(-2px);
+}
+
+.camera-icon {
+    font-size: 20px;
+}
+
+/* Categories */
+.categories {
+    padding: 0 20px 20px;
+}
+
+.categories h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.category-card.groceries { border-color: #10b981; }
+.category-card.gas { border-color: #f59e0b; }
+.category-card.bills { border-color: #ef4444; }
+.category-card.dining { border-color: #8b5cf6; }
+.category-card.shopping { border-color: #06b6d4; }
+.category-card.other { border-color: #6b7280; }
+
+.category-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.category-info h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+.amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #059669;
+    margin-bottom: 4px;
+}
+
+.receipt-count {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Recent Receipts */
+.recent-receipts {
+    padding: 0 20px 30px;
+}
+
+.recent-receipts h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.receipt-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+
+.receipt-item:hover {
+    background: #e2e8f0;
+}
+
+.receipt-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    width: 40px;
+    text-align: center;
+}
+
+.receipt-details {
+    flex: 1;
+}
+
+.receipt-details h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #1f2937;
+}
+
+.receipt-date {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.receipt-amount {
+    font-size: 16px;
+    font-weight: 600;
+    color: #059669;
+}
