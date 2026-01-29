@@ -3,120 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReciptVault - Receipt Tracking</title>
+    <title>ReciptVault - Category Management</title>
     <link rel="stylesheet" href="style.css">
+    <link href="dashbored.html">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 class="logo">ReciptVault</h1>
-            <div class="profile-icon">👤</div>
-        </header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ReciptVault</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#categories" class="active">Categories</a></li>
+                <li><a href="#receipts">Receipts</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <!-- Monthly Summary -->
-        <section class="summary-card">
-            <h2>This Month</h2>
-            <div class="total-amount">$1,247.83</div>
-            <p class="summary-text">Total spent across all categories</p>
-        </section>
+    <main class="main-content">
+        <div class="container">
+            <header class="page-header">
+                <h2>Expense Categories</h2>
+                <button class="btn-primary">+ Add Category</button>
+            </header>
 
-        <!-- Add Receipt Button -->
-        <button class="add-receipt-btn">
-            <span class="camera-icon">📷</span>
-            Add New Receipt
-        </button>
-
-        <!-- Categories Grid -->
-        <section class="categories">
-            <h3>Categories</h3>
             <div class="categories-grid">
-                <div class="category-card groceries">
-                    <div class="category-icon">🛒</div>
-                    <div class="category-info">
-                        <h4>Groceries</h4>
-                        <p class="amount">$423.67</p>
-                        <p class="receipt-count">12 receipts</p>
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Groceries</h3>
+                        <span class="category-total">$342.50</span>
+                    </div>
+                    <div class="budget-info">
+                        <span class="budget-label">Budget: $500.00</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 68.5%"></div>
+                        </div>
+                        <span class="budget-remaining">$157.50 remaining</span>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">View Receipts</button>
                     </div>
                 </div>
 
-                <div class="category-card gas">
-                    <div class="category-icon">⛽</div>
-                    <div class="category-info">
-                        <h4>Gas</h4>
-                        <p class="amount">$287.45</p>
-                        <p class="receipt-count">8 receipts</p>
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Transportation</h3>
+                        <span class="category-total">$89.20</span>
+                    </div>
+                    <div class="budget-info">
+                        <span class="budget-label">Budget: $200.00</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 44.6%"></div>
+                        </div>
+                        <span class="budget-remaining">$110.80 remaining</span>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">View Receipts</button>
                     </div>
                 </div>
 
-                <div class="category-card bills">
-                    <div class="category-icon">📄</div>
-                    <div class="category-info">
-                        <h4>Bills</h4>
-                        <p class="amount">$312.90</p>
-                        <p class="receipt-count">6 receipts</p>
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Entertainment</h3>
+                        <span class="category-total">$156.75</span>
+                    </div>
+                    <div class="budget-info">
+                        <span class="budget-label">Budget: $150.00</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill warning" style="width: 100%"></div>
+                        </div>
+                        <span class="budget-remaining warning">$6.75 over budget</span>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">View Receipts</button>
                     </div>
                 </div>
 
-                <div class="category-card dining">
-                    <div class="category-icon">🍽️</div>
-                    <div class="category-info">
-                        <h4>Dining</h4>
-                        <p class="amount">$156.23</p>
-                        <p class="receipt-count">9 receipts</p>
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Utilities</h3>
+                        <span class="category-total">$125.40</span>
                     </div>
-                </div>
-
-                <div class="category-card shopping">
-                    <div class="category-icon">🛍️</div>
-                    <div class="category-info">
-                        <h4>Shopping</h4>
-                        <p class="amount">$67.58</p>
-                        <p class="receipt-count">3 receipts</p>
+                    <div class="budget-info">
+                        <span class="budget-label">Budget: $300.00</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 41.8%"></div>
+                        </div>
+                        <span class="budget-remaining">$174.60 remaining</span>
                     </div>
-                </div>
-
-                <div class="category-card other">
-                    <div class="category-icon">📋</div>
-                    <div class="category-info">
-                        <h4>Other</h4>
-                        <p class="amount">$0.00</p>
-                        <p class="receipt-count">0 receipts</p>
+                    <div class="category-actions">
+                        <button class="btn-secondary">Edit</button>
+                        <button class="btn-secondary">View Receipts</button>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Recent Receipts -->
-        <section class="recent-receipts">
-            <h3>Recent Receipts</h3>
-            <div class="receipt-item">
-                <div class="receipt-icon">🛒</div>
-                <div class="receipt-details">
-                    <h4>Whole Foods Market</h4>
-                    <p class="receipt-date">Today, 2:34 PM</p>
-                </div>
-                <div class="receipt-amount">$47.92</div>
-            </div>
-
-            <div class="receipt-item">
-                <div class="receipt-icon">⛽</div>
-                <div class="receipt-details">
-                    <h4>Shell Gas Station</h4>
-                    <p class="receipt-date">Yesterday, 5:12 PM</p>
-                </div>
-                <div class="receipt-amount">$38.75</div>
-            </div>
-
-            <div class="receipt-item">
-                <div class="receipt-icon">🍽️</div>
-                <div class="receipt-details">
-                    <h4>Chipotle Mexican Grill</h4>
-                    <p class="receipt-date">Dec 15, 12:45 PM</p>
-                </div>
-                <div class="receipt-amount">$12.50</div>
-            </div>
-        </section>
-    </div>
+        </div>
+    </main>
 </body>
 </html>

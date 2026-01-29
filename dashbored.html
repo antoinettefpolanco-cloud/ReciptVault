@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciptVault - Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ReciptVault</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#receipts">Receipts</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <header class="page-header">
+                <h2>Dashboard</h2>
+                <div class="header-actions">
+                    <button class="btn-secondary">📷 Add Receipt</button>
+                    <select class="month-selector">
+                        <option>December 2024</option>
+                        <option>November 2024</option>
+                        <option>October 2024</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>Total Spent</h3>
+                    <span class="amount">$713.85</span>
+                    <span class="subtitle">This month</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Budget</h3>
+                    <span class="amount">$1,150.00</span>
+                    <span class="subtitle">Monthly limit</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Remaining</h3>
+                    <span class="amount positive">$436.15</span>
+                    <span class="subtitle">Available to spend</span>
+                </div>
+                <div class="summary-card">
+                    <h3>Receipts</h3>
+                    <span class="amount">23</span>
+                    <span class="subtitle">This month</span>
+                </div>
+            </div>
+
+            <!-- Quick Overview -->
+            <div class="dashboard-grid">
+                <div class="overview-section">
+                    <h3>Category Overview</h3>
+                    <div class="category-list">
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">Groceries</span>
+                                <span class="category-amount">$342.50</span>
+                            </div>
+                            <div class="mini-progress">
+                                <div class="mini-progress-fill" style="width: 68.5%"></div>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">Transportation</span>
+                                <span class="category-amount">$89.20</span>
+                            </div>
+                            <div class="mini-progress">
+                                <div class="mini-progress-fill" style="width: 44.6%"></div>
+                            </div>
+                        </div>
+                        <div class="category-item warning">
+                            <div class="category-info">
+                                <span class="category-name">Entertainment</span>
+                                <span class="category-amount">$156.75</span>
+                            </div>
+                            <div class="mini-progress">
+                                <div class="mini-progress-fill warning" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-info">
+                                <span class="category-name">Utilities</span>
+                                <span class="category-amount">$125.40</span>
+                            </div>
+                            <div class="mini-progress">
+                                <div class="mini-progress-fill" style="width: 41.8%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-section">
+                    <h3>Recent Receipts</h3>
+                    <div class="receipt-list">
+                        <div class="receipt-item">
+                            <div class="receipt-info">
+                                <span class="store-name">Whole Foods</span>
+                                <span class="receipt-date">Dec 15, 2024</span>
+                            </div>
+                            <div class="receipt-details">
+                                <span class="receipt-category">Groceries</span>
+                                <span class="receipt-amount">$47.82</span>
+                            </div>
+                        </div>
+                        <div class="receipt-item">
+                            <div class="receipt-info">
+                                <span class="store-name">Shell Gas Station</span>
+                                <span class="receipt-date">Dec 14, 2024</span>
+                            </div>
+                            <div class="receipt-details">
+                                <span class="receipt-category">Transportation</span>
+                                <span class="receipt-amount">$32.15</span>
+                            </div>
+                        </div>
+                        <div class="receipt-item">
+                            <div class="receipt-info">
+                                <span class="store-name">Netflix</span>
+                                <span class="receipt-date">Dec 12, 2024</span>
+                            </div>
+                            <div class="receipt-details">
+                                <span class="receipt-category">Entertainment</span>
+                                <span class="receipt-amount">$15.99</span>
+                            </div>
+                        </div>
+                        <div class="receipt-item">
+                            <div class="receipt-info">
+                                <span class="store-name">Target</span>
+                                <span class="receipt-date">Dec 11, 2024</span>
+                            </div>
+                            <div class="receipt-details">
+                                <span class="receipt-category">Groceries</span>
+                                <span class="receipt-amount">$89.43</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
