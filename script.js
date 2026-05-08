@@ -112,38 +112,49 @@ function checkAllBudgets() {
 
 // Function to add a new category
 function addNewCategory () {
+    console.log("Add category button clicked!");
+
     // Ask user for the category name
-    let categoryName = prompt("Enter category name;");
+    let categoryName = prompt("Enter category name:");
+    console.log("Category name entered:", categoryName);
 
     // Check if the usre cancelled or entered nothing
     if (categoryName == null || categoryName=== "") {
+        console.log("No category name, exiting");
         return; // Exit if cancelled
     }
 
     // Ask the user for budget amount
-    let budgetAmount = promt("Enter monthly budget amount (numbers only);");
+    let budgetAmount = prompt("Enter monthly budget amount (numbers only);");
+    console.log("Budget amount entered:", budgetAmount);
 
     // Check if the user cancelled or entered nothiing
     if (budgetAmount === null || budgetAmount === ""); {
+        console.log("No budget amount, exiting");
         return;// Exit if cancelled
     }
 
     //Convert budget to a number
     let budget = parseFloat(budgetAmount);
+    console.log("Budget as number:", budget);
 
+    console.log("About to call creatCategoryCard")
     //Create the new category card
     creatCategorycard(categoryName, budget);
 }
 
 // Function to create a category card
-function createCategoryCard (name, budget) {
-    // Get the category grid
-    let grid = document.getElementByIdd('category-grid');
-
+function createCategoryCard(name, budget) {
+    console.log("Creating card for:", name, "with budget:", budget);
+    
+    // Get the categories grid
+    let grid = document.getElementById('categories-grid');
+    console.log("Found grid:", grid);
+    
     // Create new card element
     let newCard = document.createElement('div');
     newCard.className = 'category-card';
-
+    
     // Set the HTML content for the new card
     newCard.innerHTML = 
         '<div class="category-header">' +
@@ -164,4 +175,5 @@ function createCategoryCard (name, budget) {
     
     // Add the new card to the grid
     grid.appendChild(newCard);
+    console.log("Card added!");
 }
