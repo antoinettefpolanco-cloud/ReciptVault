@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipts - ReceiptVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="index.html">Categories</a>
+        <a href="receipts.html">Receipts</a>
+        <a href="analytics.html">Analytics</a>
+    </nav>
+
+    <h1>My Receipts</h1>
+
+    <section>
+        <h2>Add New Receipt</h2>
+        <form id="receiptForm">
+            <label>Amount: $<input type="number" id="amount" step="0.01" required></label>
+            <label>Category:
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Groceries">Groceries</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Utilities">Utilities</option>
+                </select>
+            </label>
+            <label>Description: <input type="text" id="description" required></label>
+            <button type="submit">Add Receipt</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Past Receipts</h2>
+        <div id="receiptsList"></div>
+    </section>
+
+    <script src="receipts.js"></script>
+</body>
+</html>

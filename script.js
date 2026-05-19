@@ -2,10 +2,10 @@
 function navigateToPage(page) {
     switch(page) {
         case 'dashboard':
-            window.location.href = 'dashbored.html';
+            window.location.href = 'dashboard.html';
             break;
         case 'index':
-            window.location.href = 'categories.html'; // or whatever this current file is named
+            window.location.href = 'index.html'; // or whatever this current file is named
             break;
         case 'receipts':
             window.location.href = 'receipts.html';
@@ -22,14 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {
-            e.preventDefault(); // Stop the default link behavior
-            
-            let href = link.getAttribute('href');
-            let page = href.replace('#', ''); // Remove the # symbol
-            
-            navigateToPage(page);
+            // Don't prevent default - let the links work normally!
+            // e.preventDefault(); // Remove this line or comment it out
         });
     });
+    
     //Check budget when page loads
     checkAllBudgets();
 
@@ -39,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addButton.addEventListener('click', addNewCategory);
     }
 });
+
 
 // Function to check budget warnings
 function checkBudgetWarnings() {
@@ -118,10 +116,10 @@ function addNewCategory () {
     let categoryName = prompt("Enter category name:");
     console.log("Category name entered:", categoryName);
 
-    // Check if the usre cancelled or entered nothing
-    if (categoryName == null || categoryName=== "") {
+    // Check if the user cancelled or entered nothing
+    if (categoryName == null || categoryName.trim() === "") {
         console.log("No category name, exiting");
-        return; // Exit if cancelled
+        return;
     }
 
     // Ask the user for budget amount
@@ -129,18 +127,22 @@ function addNewCategory () {
     console.log("Budget amount entered:", budgetAmount);
 
     // Check if the user cancelled or entered nothiing
-    if (budgetAmount === null || budgetAmount === ""); {
+    if (budgetAmount === null || budgetAmount === "") {
         console.log("No budget amount, exiting");
-        return;// Exit if cancelled
+        return; // Exit if cancelled
     }
 
     //Convert budget to a number
     let budget = parseFloat(budgetAmount);
     console.log("Budget as number:", budget);
 
-    console.log("About to call creatCategoryCard")
+    if (isNaN(budget) || budget<= 0) {
+        alert("Please enter a valid positive number for the budget.");
+    }
+
+    console.log("About to call createCategoryCard")
     //Create the new category card
-    creatCategorycard(categoryName, budget);
+    createCategoryCard(categoryName, budget);
 }
 
 // Function to create a category card

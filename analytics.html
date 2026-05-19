@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - ReceiptVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>ReceiptVault</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="index.html">Categories</a></li>
+                <li><a href="receipts.html">Receipts</a></li>
+                <li><a href="analytics.html" class="active">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <header class="page-header">
+                <h2>Spending Analytics</h2>
+            </header>
+
+            <div class="analytics-summary">
+                <div class="total-spending-card">
+                    <h3>Total Spending</h3>
+                    <p class="total-amount" id="totalSpending">$0.00</p>
+                </div>
+            </div>
+
+            <section class="breakdown-section">
+                <h3>Spending by Category</h3>
+                <div id="categoryBreakdown" class="category-breakdown">
+                    <!-- JavaScript will populate this -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="analytics.js"></script>
+</body>
+</html>
+
